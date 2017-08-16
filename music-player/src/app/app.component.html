@@ -1,6 +1,11 @@
 <h1>{{title}}</h1>
 {{selectedMusic.id}} - {{selectedMusic.name}}
 <media-player-button
+	(buttonEvent)="randomClicked($event)"
+>
+	{{random?"Un-Randomize":"Randomize"}}
+</media-player-button>
+<media-player-button
 	(buttonEvent)="previousClicked($event)"
 >
 	Previous
@@ -21,4 +26,9 @@
 	(buttonEvent)="nextClicked($event)"
 >
 	Next
+</media-player-button>
+<media-player-button
+	(buttonEvent)="loopClicked($event)"
+>
+	{{loop?"Un-loop":"Loop"}}
 </media-player-button>
