@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     }
 
     getMusics(): void {
-        this.musicService.getAjaxMusics().then(musics => {
+        this.musicService.getMusics().then(musics => {
             this.musics = musics;
             this.selectedMusic = this.musics[0];
 
