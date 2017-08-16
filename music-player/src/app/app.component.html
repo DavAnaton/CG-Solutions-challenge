@@ -1,5 +1,24 @@
 <h1>{{title}}</h1>
-<media-player-button>Play</media-player-button>
-<media-player-button>Pause</media-player-button>
-<media-player-button>Previous</media-player-button>
-<media-player-button>Next</media-player-button>
+{{selectedMusic.id}} - {{selectedMusic.name}}
+<media-player-button
+	(buttonEvent)="previousClicked($event)"
+>
+	Previous
+</media-player-button>
+<media-player-button
+	(buttonEvent) = "playClicked($event)"
+	*ngIf = "!playing"
+>
+	Play
+</media-player-button>
+<media-player-button
+	(buttonEvent)="pauseClicked($event)"
+	*ngIf = "playing"
+>
+	Pause
+</media-player-button>
+<media-player-button
+	(buttonEvent)="nextClicked($event)"
+>
+	Next
+</media-player-button>
