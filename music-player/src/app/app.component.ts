@@ -6,7 +6,7 @@ import { MusicService } from '../music/music.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [MusicService]
+  providers: [MusicService],
 })
 export class AppComponent implements OnInit {
   title = 'Music Player';;
